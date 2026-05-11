@@ -819,6 +819,11 @@
       .posts-grid { grid-template-columns: repeat(2, 1fr); }
       .featured-banner-inner { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .about-grid { grid-template-columns: 1fr !important; text-align: center; }
+      .about-grid .section-eyebrow,
+      .about-grid h2,
+      .about-grid p,
+      .about-grid a { text-align: center !important; margin-left: auto; margin-right: auto; }
     }
 
     @media (max-width: 600px) {
@@ -850,6 +855,7 @@
       <nav>
         <a href="#categories">Categories</a>
         <a href="#posts">Finds</a>
+        <a href="blog.html">Blog</a>
         <a href="#about">About</a>
         <a href="#newsletter" class="nav-cta">Get the List ✦</a>
       </nav>
@@ -865,6 +871,7 @@
     <button class="mobile-close" onclick="document.querySelector('.mobile-nav').classList.remove('open')">✕</button>
     <a href="#categories" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Categories</a>
     <a href="#posts" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Finds</a>
+    <a href="blog.html" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Blog</a>
     <a href="#about" onclick="document.querySelector('.mobile-nav').classList.remove('open')">About</a>
     <a href="#newsletter" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Get the List</a>
   </div>
@@ -1079,15 +1086,38 @@
     </div>
   </section>
 
-  <!-- ALL POSTS CTA -->
-  <section id="about" style="background:var(--blush);padding:80px 24px;text-align:center">
-    <div style="max-width:640px;margin:0 auto">
+  <!-- ABOUT ME -->
+  <section id="about" style="background:var(--white);padding:80px 24px;">
+    <div class="about-grid" style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr;gap:60px;align-items:center;">
+      <div style="display:flex;justify-content:center;">
+        <div style="width:200px;height:200px;border-radius:50%;background:linear-gradient(135deg,var(--blush-mid),var(--rose-light));display:flex;align-items:center;justify-content:center;font-size:72px;flex-shrink:0;box-shadow:0 16px 48px rgba(200,131,106,.2);">🌸</div>
+      </div>
+      <div>
+        <div class="section-eyebrow" style="text-align:left;margin-bottom:10px;">✦ Hey, I'm glad you're here</div>
+        <h2 class="section-title" style="text-align:left;margin-bottom:16px;">Behind <em>ShopHerPicks</em></h2>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:16px;">
+          I'm a home-obsessed Amazon addict who spent way too many hours scrolling so you don't have to.
+          ShopHerPicks is my little corner of the internet where I share only the finds that actually
+          made it into my cart — and into my home.
+        </p>
+        <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:28px;">
+          Every roundup is hand-researched, real-review-vetted, and curated with a woman's home in mind.
+          No fluff, just the good stuff. 🤍
+        </p>
+        <a href="#newsletter" class="btn btn-outline" style="display:inline-flex;">Stay in the Loop ✦</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG CTA -->
+  <section id="blog-cta" style="background:var(--blush);padding:80px 24px;text-align:center;">
+    <div style="max-width:640px;margin:0 auto;">
       <div class="section-eyebrow">✦ The Blog</div>
-      <h2 class="section-title" style="margin-bottom:20px">Browse <em>all our posts</em></h2>
-      <p style="font-size:16px;color:var(--text-mid);line-height:1.8;margin-bottom:36px">
+      <h2 class="section-title" style="margin-bottom:20px;">Browse <em>all our posts</em></h2>
+      <p style="font-size:16px;color:var(--text-mid);line-height:1.8;margin-bottom:36px;">
         From spa bathroom upgrades to closet organization and aesthetic desk setups — every roundup is hand-researched and truly worth your time. 🤍
       </p>
-      <a href="blog.html" class="btn btn-primary" style="display:inline-flex">View All Blog Posts ✦</a>
+      <a href="blog.html" class="btn btn-primary" style="display:inline-flex;">View All Blog Posts ✦</a>
     </div>
   </section>
 
